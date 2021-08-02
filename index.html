@@ -14,14 +14,17 @@
             --header-black-color:#1C1A1A;
 
         }
-           body{
-               margin: 0;
+        body{
+            margin: 0;
+        }
+        .container{
                background: url("images/polina-rytova-1dGMs4hhcVA-unsplash.jpg") no-repeat;
                background-size: cover;
                height: 100vh;
                display: grid;
                grid-template-columns:repeat(5,minmax(1rem,20rem));
-               grid-template-rows: .5fr 3fr .5fr;
+               grid-template-rows: .5fr 3fr;
+               overflow-y: hidden;
            }
           header{
               background-color:hsla(360, 100%, 100%, 0.58);
@@ -52,14 +55,17 @@
           .header_nav a:hover{
              text-decoration:underline;
              cursor:pointer;
-             font-size: 1.50rem;
+             transform: scale(1.5);
              padding-right: 1.5rem;
+             padding-left: 1.5rem;
              font-weight: bolder;
+             transition: all .5s ;
           }
           .header_nav a:link:nth-child(odd){
               color:var(--header-black-color);
+              
           }
-          .header_img{
+          .header_logo{
               grid-column-start: 1;
               padding-left: 1.5rem;
               margin-top: .5rem;
@@ -74,46 +80,57 @@
               grid-row:3;
               grid-column: 1/6;
               background-color:hsla(360, 100%, 100%, 0.58);
-              height: 3.5rem;
+              height: 3rem;
           }
           .footer_nav{
               grid-column:5/6;
               display: flex;
           }
-         
+             
+          .footer_nav>img{
+              height: 2rem;
+              border-radius: 20px;
+          }
+          .footer_nav>img:hover{
+              cursor: pointer;
+              height: 2.25rem;
+             background-color: #FFFDFD;
+             background-size: contain;
+             transform: rotate(360deg);
+             transition: all 2s ;
+          }
         </style>
     </head>
     <body>
-       <header>
-          <img class="header_img" src="images/Yahya jamaldine.svg"  alt="logo of Portfolio" />
-           <nav class="header_nav">
-            <a href="./home.html">Home</a>
-            <a href="./home.html">About</a>
-            <a href="./home.html">Work</a>
-            <a href="./home.html">Blogs</a>
-        </nav>
-       </header>
-
-       <main class="description">
-           <div class="description__portfolio">
-            hi I’m YAHYA 👋, I’m A fRONT-end DEVELOPER FROM MOROCOO
-           </div>
-          <div class="description__fade">
-            You may be wandring way I used this kind of <br>
-            background images ? Well I live in place where we almost compte on farme to feed us, so I liked the idea of using a plantation image.
-          </div>
-          <div class="description__js">
-            By the way I lovE JAVASCRIPT
-          </div>
-       </main>
-       <footer>
-           <p class="footer__desc">Developed by Yahya Jamaldine</p>
-            <ul class="footer_nav">
-                <li>Twitter</li>
-                <li>Medium</li>
-                <li>Linkdin</li>
-                <li>Github</li>
-            </ul>
-       </footer>
+        <div class="container">
+            <header>
+                <img class="header_logo" src="images/Yahya jamaldine.svg"  alt="logo of Portfolio" />
+                 <nav class="header_nav">
+                  <a href="./home.html">Home</a>
+                  <a href="./home.html">About</a>
+                  <a href="./home.html">Work</a>
+                  <a href="./home.html">Blogs</a>
+              </nav>
+             </header>
+      
+             <main class="description">
+                 <div class="description__portfolio">
+                  hi I’m YAHYA 👋, I’m A fRONT-end DEVELOPER FROM MOROCOO
+                 </div>
+                <div class="description__fade">
+                  You may be wandring way I used this kind of <br>
+                  background images ? Well I live in place where we almost compte on farme to feed us, so I liked the idea of using a plantation image.
+                </div>
+                <div class="description__js">
+                  By the way I lovE JAVASCRIPT
+                </div>
+             </main>
+             <footer>
+                 <p class="footer__desc">Developed by Yahya Jamaldine</p>
+                    <div class="footer_nav">
+                          <img src="images/logo/iconmonstr-twitter-3 (1) 1.svg">
+                    </div>
+             </footer>
+        </div>
     </body>
 </html>
