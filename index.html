@@ -71,10 +71,19 @@
               margin-top: .5rem;
               width: 220px;
           }
-         
+         /*part of main*/
+         .description__portfolio{
+             grid-column-end: 2;
+             background-color: hsla(360, 100%, 100%, 0.58);
+         }
           main{
               grid-row:2;
+              display: grid;
           }
+
+
+          /*This part need to be fixed, please fix thd div by using a signle
+          div and make it flex*/
           footer{
               display: grid;
               grid-row:3;
@@ -82,19 +91,41 @@
               background-color:hsla(360, 100%, 100%, 0.58);
               height: 3rem;
           }
+          .footer_desc_container{
+              display: flex;
+              align-items: center;
+          }
+         .footer_desc{
+            font-family: 'Roboto Condensed';
+            transform: translateX(1rem);
+            font-weight: bold;
+            color:#4F4B4B;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            letter-spacing: 0.02em;
+         }
           .footer_nav{
               grid-column:5/6;
               display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              mix-blend-mode: normal;
+             
+              transform: translateX(-5rem);
           }
              
-          .footer_nav>img{
-              height: 2rem;
+          .footer_nav img{
+            height: 2.25rem;
               border-radius: 20px;
+              margin-right: 2rem;
+              background-color: var(--light-color);
+          }
+        .footer_nav img:nth-child(3){
+              height: 2.30rem;
           }
           .footer_nav>img:hover{
               cursor: pointer;
               height: 2.25rem;
-             background-color: #FFFDFD;
+              background-color: none;        
              background-size: contain;
              transform: rotate(360deg);
              transition: all 2s ;
@@ -117,18 +148,23 @@
                  <div class="description__portfolio">
                   hi I’m YAHYA 👋, I’m A fRONT-end DEVELOPER FROM MOROCOO
                  </div>
-                <div class="description__fade">
+               <!-- <div class="description__fade">
                   You may be wandring way I used this kind of <br>
                   background images ? Well I live in place where we almost compte on farme to feed us, so I liked the idea of using a plantation image.
                 </div>
                 <div class="description__js">
                   By the way I lovE JAVASCRIPT
-                </div>
+                </div>-->
              </main>
              <footer>
-                 <p class="footer__desc">Developed by Yahya Jamaldine</p>
+                <div class="footer_desc_container">
+                    <p class="footer_desc">Developed by Yahya Jamaldine</p>
+                </div> 
                     <div class="footer_nav">
-                          <img src="images/logo/iconmonstr-twitter-3 (1) 1.svg">
+                          <img src="images/logo/iconmonstr-twitter-3 (1) 1.svg" alt="Twitter-logo">
+                          <img src="images/logo/iconmonstr-github-1.svg" alt="Github-logo">
+                          <img src="images/logo/iconmonstr-linkedin-4.svg" alt="Linkdin-logo">
+                          <img src="images/logo/iconmonstr-medium-4.svg" alt="Medium-logo" >
                     </div>
              </footer>
         </div>
